@@ -10,24 +10,42 @@ class Project extends React.Component{
                 {
                     id: 1,
                     title: 'Project1',
+                    imageUrl: '',
                     description: 'Describing the project. Describing the project. Describing the project. Describing the project.',
                     link: ''
                 },
                 {
                     id: 2,
                     title: 'Project2',
+                    imageUrl: '',
                     description: 'Describing the project. Describing the project.Describing the project.',
                     link: ''
                 },
                 {
                     id: 3,
                     title: 'Project3',
+                    imageUrl: '',
                     description: 'Describing the project. Describing the project.Describing the project. Describing the project.',
                     link: ''
                 },
                 {
                     id: 4,
                     title: 'Project4',
+                    imageUrl: '',
+                    description: 'Describing the project. Describing the project.Describing the project. Describing the project.',
+                    link: ''
+                },
+                {
+                    id: 4,
+                    title: 'Project4',
+                    imageUrl: '',
+                    description: 'Describing the project. Describing the project.Describing the project. Describing the project.',
+                    link: ''
+                },
+                {
+                    id: 4,
+                    title: 'Project4',
+                    imageUrl: '',
                     description: 'Describing the project. Describing the project.Describing the project. Describing the project.',
                     link: ''
                 }
@@ -39,7 +57,7 @@ class Project extends React.Component{
     render(){
         const {items} = this.state;
         return(
-            <div className='w-full md:h-72 bg-blue-100 flex flex-col md:flex-row align-middle items-center md:justify-around text-white'>
+            <div className='w-full md:grid md:grid-cols-3 justify-items-center flex flex-col bg-blue-100 align-middle items-center text-white'> 
                 {
                     items.map(({id, ...otherprops}) => (
                         <Card key={id} {...otherprops} />
