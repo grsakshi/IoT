@@ -7,7 +7,11 @@ module.exports = {
         'xxs': '.55rem'
       },
       'width': {
-         'big': '30rem'
+        'big': '30rem'
+      },
+      'colors': {
+        'blue#1': '#00203FFF',
+        'green#1': '#ADEFD1FF'
       }
     },
   },
