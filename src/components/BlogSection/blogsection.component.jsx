@@ -10,28 +10,28 @@ class BlogSection extends React.Component{
                 {
                     id: 1,
                     imageUrl: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=701&q=80',
-                    date: '',
+                    date: '12th APRIL 2020',
                     title: 'Title 1',
                     link: ''
                 },
                 {
                     id: 2,
                     imageUrl: 'https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1866&q=80',
-                    date: '',
+                    date: '12th MARCH 2020',
                     title: 'Title 2',
                     link: ''
                 },
                 {
                     id: 3,
                     imageUrl: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80',
-                    date: '',
-                    title: 'Title 3',
+                    date: '12th OCTOBER 2020',
+                    title: '9 ways to trick your brain into working',
                     link: ''
                 },
                 {
                     id: 4,
                     imageUrl: 'https://images.unsplash.com/photo-1529397938791-2aba4681454f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
-                    date: '',
+                    date: '12th MARCH 2020',
                     title: 'Title 4',
                     link: ''
                 }
