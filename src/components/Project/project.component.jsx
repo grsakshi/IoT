@@ -36,15 +36,15 @@ class Project extends React.Component{
                     link: ''
                 },
                 {
-                    id: 4,
-                    title: 'Project4',
+                    id: 5,
+                    title: 'Project5',
                     imageUrl: '',
                     description: 'Describing the project. Describing the project.Describing the project. Describing the project.',
                     link: ''
                 },
                 {
-                    id: 4,
-                    title: 'Project4',
+                    id: 6,
+                    title: 'Project6',
                     imageUrl: '',
                     description: 'Describing the project. Describing the project.Describing the project. Describing the project.',
                     link: ''
