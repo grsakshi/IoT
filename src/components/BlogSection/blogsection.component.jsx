@@ -1,5 +1,13 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, A11y } from 'swiper';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import './blogsection.style.css';
+
 import Blog from '../Blog/blog.component';
+
+SwiperCore.use([Navigation, A11y]);
 
 class BlogSection extends React.Component{
     constructor(){
@@ -42,13 +50,26 @@ class BlogSection extends React.Component{
     render(){
         const {blogs} = this.state;
         return(
-            <div className='w-full md:grid md:grid-cols-2 md:gap-6 justify-items-center bg-gray-300 align-middle items-center text-black grid grid-cols-1 gap-4 p-4'>
-                {
-                    blogs.map(({id, ...otherprops}) => (
-                        <Blog key={id} {...otherprops} />
-                    ))
-                }
-            </div>
+            <React.Fragment>
+                <div className='w-full justify-items-center align-middle items-center text-black p-4'>
+                    <Swiper 
+                        id='main'
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        navigation
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                    >
+                        {
+                            blogs.map(({id, ...otherprops}) => (
+                                <SwiperSlide key={id}>
+                                    <Blog key={id} {...otherprops} />
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </div>
+            </React.Fragment>
         );
     }
 }

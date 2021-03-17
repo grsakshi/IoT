@@ -1,5 +1,12 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, A11y } from 'swiper';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import './project.style.css';
 import Card from '../Card/card.component';
+
+SwiperCore.use([Navigation, A11y]);
 
 class Project extends React.Component{
     constructor(){
@@ -57,13 +64,26 @@ class Project extends React.Component{
     render(){
         const {items} = this.state;
         return(
-            <div className='w-full md:grid md:grid-cols-3 justify-items-center flex flex-col bg-blue-100 align-middle items-center text-white'> 
-                {
-                    items.map(({id, ...otherprops}) => (
-                        <Card key={id} {...otherprops} />
-                    ))
-                }
-            </div>
+            <React.Fragment>
+                <div className='w-full justify-items-center align-middle items-center text-white'> 
+                    <Swiper 
+                        id='main'
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        navigation
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                    >
+                        {
+                            items.map(({id, ...otherprops}) => (
+                                <SwiperSlide key={id}>
+                                    <Card key={id} {...otherprops} />
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </div>
+            </React.Fragment>
         );
     }
 }
